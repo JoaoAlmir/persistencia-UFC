@@ -6,11 +6,10 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 
 
-public class Ex1{
+public class Ex2{
     public static void main(String[] args){
         
         try {
-
         long ini = System.currentTimeMillis();
 
 
@@ -27,15 +26,15 @@ public class Ex1{
         }
         ps.close();
         br.close();
-
+        
         long fim = System.currentTimeMillis();
         System.out.println("Tempo de execução: " + (fim - ini) + " ms");
-        
             
         } catch (IOException e) {
             System.out.println("Erro na entrada ou saida");
         }
 
+        
         
 
 
