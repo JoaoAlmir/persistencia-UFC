@@ -1,0 +1,30 @@
+2. Escolha e baixe um arquivo csv a partir do link e use-o nas questões a seguir. Na resolução desta questão, não enviar os arquivos envolvidos, mas somente os resultados pedidos em arquivo texto com extensão txt. Envie somente o link do arquivo CSV escolhido.
+  -> Gere as somas checksum, md5, sha1 e sha256 do arquivo csv escolhido, usando utilitários de linha de comando do próprio sistema operacional ou instalado nele.  
+  -> Compare os tempos de execução e tamanhos dos arquivos gerados. Dica: para obter o tempo de execução, use o comando time.
+  Exemplo: time md5sum iris.csv
+
+link: https://zenodo.org/record/3469741/files/2014_01-Traffic_Sensors_Fortaleza.csv?download=1
+
+====================================================================
+md5sum
+75c9e7b5dd6548ebf9d879937905931c  
+
+real    0m0,462s
+user    0m0,428s
+sys     0m0,030s
+
+====================================================================
+sha1sum
+aa0cca517cc4261cb28a8b0829e6e75e8ecd589d  
+
+real    0m0,557s
+user    0m0,524s
+sys     0m0,033s
+====================================================================
+sha256sum
+f93284377a3856f3b5ce72ea88bbab45fe7ead8dba64efa0a2ba6accd994d9de  
+
+real    0m1,307s
+user    0m1,276s
+sys     0m0,029s
+====================================================================
