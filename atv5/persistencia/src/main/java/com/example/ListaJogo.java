@@ -1,3 +1,4 @@
+package persistencia.src.main.java.com.example;
 import java.util.List;
 
 public class ListaJogo implements java.io.Serializable {

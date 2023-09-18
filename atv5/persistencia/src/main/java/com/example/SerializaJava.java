@@ -1,3 +1,4 @@
+package persistencia.src.main.java.com.example;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
