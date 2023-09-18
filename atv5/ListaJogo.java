@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class ListaJogo {
+public class ListaJogo implements java.io.Serializable {
     private List<Jogo> jogos;
 
     public ListaJogo(List<Jogo> jogos) {
