@@ -1,0 +1,30 @@
+{
+  "jogos" : [ {
+    "id" : 1,
+    "nome" : "Pac Man",
+    "categoria" : "Ação",
+    "descricao" : "come come",
+    "desenvolvedora" : "Harry potter",
+    "distribuidora" : "Hanna Montana",
+    "preco" : 100.0,
+    "nota" : 3.0
+  }, {
+    "id" : 2,
+    "nome" : "Pou",
+    "categoria" : "Sobrevivencia",
+    "descricao" : "come come",
+    "desenvolvedora" : "Silvio Santos",
+    "distribuidora" : "Google",
+    "preco" : 0.0,
+    "nota" : 8.0
+  }, {
+    "id" : 2,
+    "nome" : "Rift",
+    "categoria" : "MMO",
+    "descricao" : "farmaa",
+    "desenvolvedora" : "Thor",
+    "distribuidora" : "UFC",
+    "preco" : 0.0,
+    "nota" : 8.0
+  } ]
+}
