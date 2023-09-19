@@ -17,6 +17,10 @@ public class ListaJogo implements java.io.Serializable {
         this.jogos = jogos;
     }
 
+
+    public ListaJogo() {
+    }
+
     @Override
     public String toString() {
         return "ListaJogo{" + "jogos=" + jogos + '}';
