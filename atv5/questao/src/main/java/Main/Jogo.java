@@ -1,4 +1,4 @@
-package persistencia.src.main.java.com.example;
+package Main;
 public class Jogo implements java.io.Serializable{
 
     private int id;

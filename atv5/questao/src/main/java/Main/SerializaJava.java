@@ -1,4 +1,4 @@
-package persistencia.src.main.java.com.example;
+package Main;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -13,7 +13,7 @@ public class SerializaJava {
         ListaJogo lj = new ListaJogo(List.of(j1, j2, j3));
 
         try {
-            FileOutputStream fileOut = new FileOutputStream("./jogo.ser");
+            FileOutputStream fileOut = new FileOutputStream("./src/main/java/Main/jogos.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(lj);
             out.close();

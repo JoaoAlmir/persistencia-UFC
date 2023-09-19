@@ -1,0 +1,34 @@
+<listaJogos>
+  <jogos>
+    <jogo>
+      <id>1</id>
+      <nome>Pac Man</nome>
+      <categoria>Ação</categoria>
+      <descricao>come come</descricao>
+      <desenvolvedora>Harry potter</desenvolvedora>
+      <distribuidora>Hanna Montana</distribuidora>
+      <preco>100.0</preco>
+      <nota>3.0</nota>
+    </jogo>
+    <jogo>
+      <id>2</id>
+      <nome>Pou</nome>
+      <categoria>Sobrevivencia</categoria>
+      <descricao>come come</descricao>
+      <desenvolvedora>Silvio Santos</desenvolvedora>
+      <distribuidora>Google</distribuidora>
+      <preco>0.0</preco>
+      <nota>8.0</nota>
+    </jogo>
+    <jogo>
+      <id>2</id>
+      <nome>Rift</nome>
+      <categoria>MMO</categoria>
+      <descricao>farmaa</descricao>
+      <desenvolvedora>Thor</desenvolvedora>
+      <distribuidora>UFC</distribuidora>
+      <preco>0.0</preco>
+      <nota>8.0</nota>
+    </jogo>
+  </jogos>
+</listaJogos>
