@@ -130,15 +130,41 @@ public class ProdutoJDBCDAO implements ProdutoDAO {
 		return pr;
 	}
 
+	public List<Produto> find() {
+		Connection con = null;
+		List<Produto> result = null;
+		try {
+			con = ConnectionFactory.getConnection();
+			PreparedStatement pst;
+			String sql = "select * from Produtos";
+			pst = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			result = new ArrayList<Produto>();
+			while (rs.next()) {
+				Produto cl = map(rs);
+				result.add(cl);
+			}
+		} catch (SQLException e) {
+			throw new DAOException("Operação não realizada com sucesso.", e);
+		} finally {
+			try {
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				throw new DAOException("Não foi possível fechar a conexão.",e);
+			}
+		}
+		return result;
+	}
 
 	public List<Produto> findDesc(String desc) {
 		Connection con = null;
 		List<Produto> result = null;
 		try {
 			con = ConnectionFactory.getConnection();
-			String sql = "select id, codigo, descricao, preco, qtd, data from produtos where descricao = ?";
+			String sql = "select id, codigo, descricao, preco, qtd, data from produtos where descricao like ?";
 			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setString(1, desc);
+			pst.setString(1, '%' + desc + '%');
 			ResultSet rs = pst.executeQuery();
 			result = new ArrayList<Produto>();
 			while (rs.next()) {

@@ -13,6 +13,7 @@ public interface ProdutoDAO {
 	public void delete(int id);
 	public Produto find(int id);
 	public Produto findCod(String cod);
+	public List<Produto> find();
 	public List<Produto> findDesc(String desc);
 	public List<Produto> findLeq(double preco);
 	public List<Produto> findInterval(LocalDate data1, LocalDate data2);
