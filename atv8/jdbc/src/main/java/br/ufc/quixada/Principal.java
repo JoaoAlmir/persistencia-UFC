@@ -13,10 +13,10 @@ public class Principal {
 
 	public static void main(String[] args) {
 		ProdutoDAO baseProdutos = new ProdutoJDBCDAO();
-		String menu = "Escolha uma opção:\n1 - Inserir\n2 - Atualizar por codigo\n3 - Remover por codigo\n4 - Exibir por codigo\n5 - Exibir por id\n6 - Exibir todos os produtos\n7 - Exibir descriçao contida\n8 - Exibir preços menor ou igual\n"
+		String menu = "Escolha uma opção:\n1 - Inserir\n2 - Atualizar por codigo\n3 - Remover por codigo\n4 - Exibir por codigo\n5 - Exibir por id\n6 - Exibir todos os produtos\n7 - Exibir produtos com descricao contendo substring\n8 - Exibir produtos com preço menor ou igual\n9 - Exibir produtos com intervalo entre datas\n"
 				+ //
-				"9 - Sair";
-		char opcao = '0';
+				"0 - Sair";
+		char opcao = 'x';
 		do {
 			try {
 				Produto pdt;
@@ -65,12 +65,12 @@ public class Principal {
 						Double preco = Double.parseDouble(JOptionPane.showInputDialog("Preço"));
 						listaProdutos(baseProdutos.findLeq(preco));
 						break;
-					// case '9': // Exibir intervalo de datas
-					// 	LocalDate data1 = LocalDate.parse(JOptionPane.showInputDialog("Data1"));
-					// 	LocalDate data2 = LocalDate.parse(JOptionPane.showInputDialog("Data2"));
-					// 	listaProdutos(baseProdutos.findInterval(data1, data2));
-					// 	break;
-					case '9': // Sair
+					case '9': // Exibir intervalo de datas
+						LocalDate data1 = LocalDate.parse(JOptionPane.showInputDialog("Data1"));
+						LocalDate data2 = LocalDate.parse(JOptionPane.showInputDialog("Data2"));
+						listaProdutos(baseProdutos.findInterval(data1, data2));
+						break;
+					case '0': // Sair
 						break;
 					default:
 						JOptionPane.showMessageDialog(null, "Opção Inválida");
@@ -80,7 +80,7 @@ public class Principal {
 				e.printStackTrace();
 				JOptionPane.showMessageDialog(null, "Erro: " + e.getMessage());
 			}
-		} while (opcao != '8');
+		} while (opcao != '0');
 	}
 
 	public static void obterProduto(Produto cl) {
